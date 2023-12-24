@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An FAQ page</title>
+    <link rel="stylesheet" href="./site.css">
+<script src="./jquery-1.7.2.min.js"></script>
+<script>
+    $(document).ready (
+        function(){
+            $('.answer').hide();
+            $('.main h2').toggle(
+                function(){
+                    $(this).next('.answer').slideDown();
+                    $(this).addClass('close');
+                },
+                function (){
+                    $(this).next('.answer').fadeOut();
+                    $(this).removeClass('close');
+                }
+            )
+        }
+    )
+</script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo">Know more about Michael</div>
+        <div class="content">
+            <main class="main">
+                <h1> An FAQ about Michael</h1>
+                <h2>How tall is Michael?</h2>
+                <div class="answer">
+                    <p>i'm not really sure, but i think he should be around 5'7 feets</p>
+                </div>
+                <h2>What's his complexion?</h2>
+                <div class="answer">
+                    <p>he is fair in complexion</p>
+                </div>
+                <h2> What is his profession?</h2>
+                <div class="answer">
+                    <p> He is a licensed Physiotherapist</p> 
+                </div>
+                <h2>What's his marital status?</h2>
+                <div class="answer">
+                    <p> He is currently single</p>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
